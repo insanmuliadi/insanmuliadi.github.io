@@ -1,4 +1,5 @@
 theme: jekyll-theme-minimal
+url: "https://insanmuliadi.github.io/"
 permalink: /:categories/:year/:month/:title/
 title: San's Blog
 description: Berbagi cerita dan inspirasi
