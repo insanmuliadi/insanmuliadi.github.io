@@ -55,3 +55,31 @@ h1, h2, h3, h4, h5, h6 {
 body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:16px
 }
+.main-raw{max-width:620px;margin:0 auto}
+.page-header {
+  background: #fffaf4;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+.page-header h1 {
+  font-size: 20px;
+}
+.page-description {
+  font-size: .8em;
+}
+.tabs {
+  margin-bottom: 10px;
+}
+.tab-btn {
+  padding: 2px 8px;
+  font-size: .8em;
+  border-radius: 2px;
+  border: 1px solid #ddd;
+  background: #fffaf4;
+}
+ol,ul {
+  margin-left: 40px;
+}
+p {
+  margin-bottom: 15px;
+}
