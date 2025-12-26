@@ -18,7 +18,7 @@ img{max-width:100%;width:100%}
     .tabs{margin-bottom:15px;display: flex;overflow: auto;}
     ol,ul{margin-left:40px}p{margin-bottom:15px}
     section{margin-bottom:30px}
-    .entry-wrapper{display:flex}
+    .entry-wrapper{display:flex;flex-wrap:wrap}
     .sectionh2{margin-bottom:15px}
     .entry{margin-bottom:20px;width:48%}
     .entry:nth-of-type(even){margin-left:auto}
@@ -55,7 +55,7 @@ img{max-width:100%;width:100%}
 <main class="main">
 	<div class="tabs">
   <button class="tab-btn active" data-tab="home">🏠 Home</button>
-  <button class="tab-btn" data-tab="ai">🤖 AI</button>
+  <button class="tab-btn" data-tab="ai">🤖 Ask AI</button>
   <button class="tab-btn" data-tab="url">🔗 URL Generator</button>
   <button class="tab-btn" data-tab="snippets">📄 JS Snippets</button>
   <button class="tab-btn" data-tab="request">🚀 Request</button>
@@ -77,13 +77,13 @@ img{max-width:100%;width:100%}
                 </ul>
                 
                 <div class="ai-response" style="margin-top: 30px;">
-                    <h3><i class="fas fa-info-circle"></i> Petunjuk Penggunaan</h3>
+                    <h3>👉 Petunjuk Penggunaan</h3>
                     <p>Klik pada tab yang ingin Anda buka. Tab yang aktif akan ditandai dengan warna biru. Setiap tab memiliki fungsionalitas yang berbeda sesuai dengan namanya.</p>
                 </div>
     </section>
     <!-- Area Postingan -->
     <section class="post-section">
-      <h2 class="sectionh2">📰 Tutorial</h2>
+      <h2 class="sectionh2">📰 JS Tutorial</h2>
       <div class="entry-wrapper">
       <article class="entry">
       	<a class="entrylink" href="#">
@@ -104,6 +104,28 @@ img{max-width:100%;width:100%}
           <div class="entrysnippet">
           <h3>Shortcode Untuk Event Box di dalam Postingan</h3>
           <div class="entrysnippet">Butuh kode Javascript untuk membuat box di dalam postingan? Ini contohnya... ↗</div>
+          </div>
+        </a>
+      </article>
+      <article class="entry">
+      	<a class="entrylink" href="#">
+          <div class="img-container">
+          	<img alt="gambar ilustrasi" src="https://cdn.dribbble.com/userupload/33650416/file/original-3fd22e1f77b9525d4acbf4fce5e4ad1f.jpg"/>
+          </div>
+          <div class="entrysnippet">
+          <h3>Kode JS Sederhana untuk Menu</h3>
+          <div class="entrysnippet">Untuk menu seharusnya kodenya sederhana saja, yang membuatnya berbeda adalah CSSnya... ↗</div>
+          </div>
+        </a>
+      </article>
+      <article class="entry">
+      	<a class="entrylink" href="#">
+          <div class="img-container">
+          	<img alt="gambar ilustrasi" src="https://s3-alpha.figma.com/hub/file/2554869278/5399ce2d-d051-40eb-99c6-b77e399f45c0-cover.png"/>
+          </div>
+          <div class="entrysnippet">
+          <h3>Cara Menampilkan Icon Pada Footer</h3>
+          <div class="entrysnippet">Untuk menampilkan icon pada footer bisa dengan menambahkannya langsung pada HTML atau menggunakan JS... ↗</div>
           </div>
         </a>
       </article>
