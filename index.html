@@ -1,1 +1,94 @@
-Halo
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Generate URL Blogger dengan JSONP</title>
+  <style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  .main{max-width:680px;margin:10px auto;position:relative}
+  input{padding:5px;width:28%;margin-right:10px}
+  textarea{width:100%;padding:5px}
+  .option{display:flex;width:100%;margin:10px 0}
+  .option button{width:80px;margin-left:auto}
+  #copy {width: 60px;padding: 5px 10px;}
+  .copyNotification{display:none;position:absolute;background:#c72c2c;padding:7px 20px;border-radius:2px;color:#fff;transform:translate3d(-50%,-50%,0);left:50%;top:50%}
+  .copyNotification.show{display:block}
+  </style>
+</head>
+<body>
+<main class="main">
+  <h2>Generate URL Postingan Blogger (via JSONP)</h2>
+  <div class="option">
+  <input id="domain-name" type="text" placeholder="Url blog" value="www.goinsan.com">
+  <input id="max-res" type="number" value="50">
+  <input id="urltag" type="text" placeholder="label">
+  <button onclick="generate()">Generate</button>
+  </div>
+  <textarea id="results" rows="20" cols="80" placeholder="Hasil URL akan muncul di sini..."></textarea>
+  <button id="copy" onclick="copyText('results')">Salin</button>
+  <div class="copyNotification">Disalin</div>
+</main>
+  <script>
+    function generate() {
+      const domName = document.getElementById("domain-name").value;
+	  const maxres = document.getElementById("max-res").value;
+      const urlRes = document.getElementById("results");
+      const urlLabel = document.getElementById("urltag").value.trim();
+      const callbackName = 'jsonpCallback_' + Date.now();
+      const script = document.createElement('script');
+
+      // Tentukan URL berdasarkan label
+      let url = '';
+      if (urlLabel === "") {
+        url = `https://${domName}/feeds/posts/summary?alt=json-in-script&max-results=${maxres}&callback=${callbackName}`;
+      } else {
+        url = `https://${domName}/feeds/posts/summary/-/${encodeURIComponent(urlLabel)}?alt=json-in-script&max-results=${maxres}&callback=${callbackName}`;
+      }
+
+      // Definisikan callback global
+      window[callbackName] = function(data) {
+        const entries = data.feed.entry || [];
+        const urls = entries.map(entry => {
+          const altLink = entry.link.find(link => link.rel === 'alternate');
+          return altLink ? altLink.href : null;
+        }).filter(Boolean);
+
+        urlRes.value = urls.join('\n');
+        //console.log("Data berhasil diambil:", urls);
+
+        // Bersihkan setelah selesai
+        delete window[callbackName];
+        document.body.removeChild(script);
+      };
+
+      // Inject script JSONP
+      script.src = url;
+      script.onerror = () => {
+        urlRes.value = 'Gagal mengambil data JSONP.';
+        delete window[callbackName];
+        document.body.removeChild(script);
+      };
+      document.body.appendChild(script);
+    };;
+	
+	
+	function copyText(elementId) {
+	var copyText = document.getElementById(elementId);
+	var copyNotif = document.querySelector('.copyNotification');
+	if (copyText.value == "") {alert("Konten kosong!");} else {
+		copyText.select();
+		copyText.setSelectionRange(0, 99999);
+		navigator.clipboard.writeText(copyText.value).then(function() {
+        setTimeout(function() {
+          copyNotif.classList.add('show');
+          setTimeout(function() {
+            copyNotif.classList.remove('show');
+          }, 1000);
+        }, 100);
+      });
+	  //alert("Konten dengan format HTML berhasil disalin!");
+	}
+}
+  </script>
+</body>
+</html>
