@@ -16,8 +16,10 @@ img{max-width:100%;width:100%}
 .page-header h1{font-size:20px}.page-description{font-size:.8em}.tabs{margin-bottom:10px}
 ol,ul{margin-left:40px}p{margin-bottom:15px}
     section{margin-bottom:30px}
+    .entry-wrapper{display:flex}
     .sectionh2{margin-bottom:15px}
-    .entry{margin-bottom:20px}
+    .entry{margin-bottom:20px;width:48%}
+    .entry:nth-of-type(even){margin-left:auto}
     .entrylink img{margin-bottom:10px}
     .entrysnippet{line-height:1.2;margin-top:5px}
   input{padding:5px;width:28%;margin-right:10px}
@@ -29,26 +31,7 @@ ol,ul{margin-left:40px}p{margin-bottom:15px}
   .copyNotification.show{display:block}
     *{margin:0;padding:0;box-sizing:border-box}
   .main{max-width:680px;margin:10px auto;position:relative}
-.tab-panel {
-  display: none;
-}
-
-.tab-panel.active {
-  display: block;
-}
-.tab-btn.active {
-  color: white;
-  background: #ed7800;
-}
-.tab-btn {
-  padding: 6px 12px;
-  font-size: .8em;
-  border-radius: 2px;
-  border: none;
-  background: #ffead4;
-  color: #000;
-  font-weight: bold;
-}
+.tab-panel{display:none}.tab-panel.active{display:block}.tab-btn.active{color:#fff;background:#ed7800}.tab-btn{padding:6px 12px;font-size:.8em;border-radius:2px;border:none;background:#ffead4;color:#000;font-weight:700}
   input{padding:5px;width:28%;margin-right:10px}
   textarea{width:100%;padding:5px}
   .option{display:flex;width:100%;margin:10px 0}
@@ -97,8 +80,9 @@ ol,ul{margin-left:40px}p{margin-bottom:15px}
                 </div>
     </section>
     <!-- Area Postingan -->
-    <section>
+    <section class="post-section">
       <h2 class="sectionh2">📃 Tutorial</h2>
+      <div class="entry-wrapper">
       <article class="entry">
       	<a class="entrylink" href="#">
           <img alt="gambar ilustrasi" src="https://read.learnyard.com/content/images/2024/07/logo.png"/>
@@ -117,6 +101,7 @@ ol,ul{margin-left:40px}p{margin-bottom:15px}
           </div>
         </a>
       </article>
+      </div>
     </section>
     <button class="loadmore">Lihat Postingan Lainnya...</button>
 	</div>
@@ -139,9 +124,11 @@ ol,ul{margin-left:40px}p{margin-bottom:15px}
   <div id="request" class="tab-panel">Konten Request</div>
 </div>
 </main>
+<div class="sidebar">
 	<div id="scroll-container">
 		<div id="indicator"></div>
-  </div>
+	</div>
+</div>
 </div>
   <script>
 	  function selectTab(){
