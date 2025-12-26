@@ -7,6 +7,17 @@
   <style>
   *{margin:0;padding:0;box-sizing:border-box}
   .main{max-width:680px;margin:10px auto;position:relative}
+	  .tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.tab-btn.active {
+  color: red;
+}
   input{padding:5px;width:28%;margin-right:10px}
   textarea{width:100%;padding:5px}
   .option{display:flex;width:100%;margin:10px 0}
@@ -21,7 +32,18 @@
 <div class="page-description">Useful JS codes for Blogger Template</div>
 </header>
 <main class="main">
-	<div id="url-generator">
+	<div class="tabs">
+  <button class="tab-btn active" data-tab="home">Home</button>
+  <button class="tab-btn" data-tab="ai">AI</button>
+  <button class="tab-btn" data-tab="url">URL Generator</button>
+  <button class="tab-btn" data-tab="snippets">Snippets</button>
+  <button class="tab-btn" data-tab="request">Request</button>
+</div>
+
+<div class="tab-content">
+	<div id="home" class="tab-panel active">Konten Home</div>
+	<div id="ai" class="tab-panel">Konten AI</div>
+  <div id="url" class="tab-panel">
 		<div class="h2-label"> Blogger URL Generator</div>
 		<h2>Generate URL Postingan Blogger (via JSONP)</h2>
 		<div class="option">
@@ -34,8 +56,33 @@
 		<button id="copy" onclick="copyText('results')">Salin</button>
 		<div class="copyNotification">Disalin</div>
 	</div>
+  </div>
+  <div id="snippets" class="tab-panel">Konten Snippets</div>
+  <div id="request" class="tab-panel">Konten Request</div>
+</div>
 </main>
   <script>
+	  function selectTab(){
+		  document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".tab-btn");
+  const panels = document.querySelectorAll(".tab-panel");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const target = tab.dataset.tab;
+
+      // reset active
+      tabs.forEach(t => t.classList.remove("active"));
+      panels.forEach(p => p.classList.remove("active"));
+
+      // set active
+      tab.classList.add("active");
+      document.getElementById(target).classList.add("active");
+    });
+  });
+});		  
+	  }
+	  selectTab();
     function generate() {
       const domName = document.getElementById("domain-name").value;
 	  const maxres = document.getElementById("max-res").value;
