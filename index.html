@@ -15,7 +15,7 @@ img{max-width:100%;width:100%}
 .main-raw{width:95%;max-width:860px;margin:0 auto}
 .page-header{background:#ed7800;margin-bottom:20px;padding:10px 0;color:#ffffff}
 .page-header h1{font-size:20px}.page-description{font-size:.8em}
-    .tabs{margin-bottom:10px;display: flex;overflow: auto;}
+    .tabs{margin-bottom:15px;display: flex;overflow: auto;}
     ol,ul{margin-left:40px}p{margin-bottom:15px}
     section{margin-bottom:30px}
     .entry-wrapper{display:flex}
@@ -23,7 +23,8 @@ img{max-width:100%;width:100%}
     .entry{margin-bottom:20px;width:48%}
     .entry:nth-of-type(even){margin-left:auto}
     .entrylink{color:#000}
-    .entrylink img{margin-bottom:15px}
+    .entrylink .img-container{width:100%;position:relative;margin-bottom:15px;height:0;padding-top:56.25%;overflow:hidden}
+    .entrylink .img-container img{position:absolute;top:0;left:0;width:100%;height:auto;min-height:100%;object-fit:cover}
     .entrysnippet{font-size:.9rem;line-height:1.2;margin-top:10px}
     input{padding:5px;width:28%;margin-right:10px}
     textarea{width:100%;padding:5px}
@@ -86,7 +87,9 @@ img{max-width:100%;width:100%}
       <div class="entry-wrapper">
       <article class="entry">
       	<a class="entrylink" href="#">
-          <img alt="gambar ilustrasi" src="https://read.learnyard.com/content/images/2024/07/logo.png"/>
+          <div class="img-container">
+          	<img alt="gambar ilustrasi" src="https://read.learnyard.com/content/images/2024/07/logo.png"/>
+          </div>
           <div class="entrysnippet">
           <h3>Kode JS untuk Menu dengan Dropdown</h3>
           <div class="entrysnippet">Berikut ini contoh kode Javascript untuk membuat menu yang memiliki dropdown yang bisa dikontrol di tata letak... ↗</div>
@@ -95,7 +98,9 @@ img{max-width:100%;width:100%}
       </article>
       <article class="entry">
       	<a class="entrylink" href="#">
-          <img alt="gambar ilustrasi" src="https://cyberpanel.net/wp-content/uploads/2024/12/AD_4nXfvZTW7yCLfqqDBvpWbbhYCd-sg.webp"/>
+          <div class="img-container">
+          	<img alt="gambar ilustrasi" src="https://cyberpanel.net/wp-content/uploads/2024/12/AD_4nXfvZTW7yCLfqqDBvpWbbhYCd-sg.webp"/>
+          </div>
           <div class="entrysnippet">
           <h3>Shortcode Untuk Event Box di dalam Postingan</h3>
           <div class="entrysnippet">Butuh kode Javascript untuk membuat box di dalam postingan? Ini contohnya... ↗</div>
