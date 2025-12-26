@@ -21,8 +21,9 @@ ol,ul{margin-left:40px}p{margin-bottom:15px}
     .sectionh2{margin-bottom:15px}
     .entry{margin-bottom:20px;width:48%}
     .entry:nth-of-type(even){margin-left:auto}
-    .entrylink img{margin-bottom:10px}
-    .entrysnippet{line-height:1.2;margin-top:5px}
+    .entrylink{color:#000}
+    .entrylink img{margin-bottom:15px}
+    .entrysnippet{font-size:.9rem;line-height:1.2;margin-top:10px}
   input{padding:5px;width:28%;margin-right:10px}
   textarea{width:100%;padding:5px}
   .option{display:flex;width:100%;margin:10px 0}
@@ -41,7 +42,8 @@ ol,ul{margin-left:40px}p{margin-bottom:15px}
   .copyNotification{display:none;position:absolute;background:#c72c2c;padding:7px 20px;border-radius:2px;color:#fff;transform:translate3d(-50%,-50%,0);left:50%;top:50%}
   .copyNotification.show{display:block}
     .page-footer{background:#fafafa; padding:10px 0} 
-    .page-footer a{color:#bb3d00;text-decoration:underline;font-size:.9em}
+    .page-footer a{color:#000;text-decoration:underline;font-size:.9rem;margin-right:10px}
+    .loadmore{padding:4px 10px;border-radius:2px;margin-bottom:10px}
   </style>
 </head>
 <body>
@@ -63,8 +65,8 @@ ol,ul{margin-left:40px}p{margin-bottom:15px}
 <div class="tab-content">
 	<div id="home" class="tab-panel active">
 		<section>
-                <h2 class="sectionh2 tab-title">🖐🏻 Selamat Datang di Aplikasi</h2>
-                <p class="tab-description">Ini adalah halaman utama aplikasi. Gunakan tab di atas untuk mengakses berbagai fitur yang tersedia.</p>
+                <h2 class="sectionh2 tab-title">🖐🏻 Selamat Datang</h2>
+                <p class="tab-description">Ini adalah halaman utama Fun JS. Gunakan tab di atas untuk mengakses berbagai fitur yang tersedia.</p>
                 
                 <p>Aplikasi ini menyediakan beberapa fitur utama:</p>
                 <ul class="feature-list">
@@ -82,7 +84,7 @@ ol,ul{margin-left:40px}p{margin-bottom:15px}
     </section>
     <!-- Area Postingan -->
     <section class="post-section">
-      <h2 class="sectionh2">📃 Tutorial</h2>
+      <h2 class="sectionh2">📰 Tutorial</h2>
       <div class="entry-wrapper">
       <article class="entry">
       	<a class="entrylink" href="#">
@@ -104,7 +106,7 @@ ol,ul{margin-left:40px}p{margin-bottom:15px}
       </article>
       </div>
     </section>
-    <button class="loadmore">Lihat Postingan Lainnya...</button>
+    <button class="loadmore">Lihat Lainnya...</button>
 	</div>
 	<div id="ai" class="tab-panel">Konten AI</div>
   <div id="url" class="tab-panel">
@@ -132,7 +134,7 @@ ol,ul{margin-left:40px}p{margin-bottom:15px}
 </div>
 <footer class="page-footer">
   <div class="main-raw">
-    <a href="pages/contact">Kontak Kami</a>
+    <a href="pages/about-us.html">Tentang Kami</a><a href="pages/contact.html">Kontak Kami</a>
   </div>  
 </footer>
   <script>
