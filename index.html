@@ -5,7 +5,47 @@
   <title>Generate URL Blogger dengan JSONP</title>
 	<link rel="stylesheet" href="css/main.css">
   <style>
-  *{margin:0;padding:0;box-sizing:border-box}
+*,*::before,*::after{box-sizing:border-box}*:not(dialog){margin:0}@media (prefers-reduced-motion:no-preference){html{interpolate-size:allow-keywords}}body{line-height:1.5;-webkit-font-smoothing:antialiased}img,picture,video,canvas,svg{display:block;max-width:100%}input,button,textarea,select{font:inherit}p,h1,h2,h3,h4,h5,h6{overflow-wrap:break-word}p{text-wrap:pretty}h1,h2,h3,h4,h5,h6{text-wrap:balance}#root,#__next{isolation:isolate}body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:16px}
+.main-raw{max-width:860px;margin:0 auto}
+.page-header {
+  background: #fffaf4;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+.page-header h1 {
+  font-size: 20px;
+}
+.page-description {
+  font-size: .8em;
+}
+.tabs {
+  margin-bottom: 10px;
+}
+.tab-btn {
+  padding: 2px 8px;
+  font-size: .8em;
+  border-radius: 2px;
+  border: 1px solid #ddd;
+  background: #fffaf4;
+}
+ol,ul {
+  margin-left: 40px;
+}
+p {
+  margin-bottom: 15px;
+}
+
+    
+    
+    
+  input{padding:5px;width:28%;margin-right:10px}
+  textarea{width:100%;padding:5px}
+  .option{display:flex;width:100%;margin:10px 0}
+  .option button{width:80px;margin-left:auto}
+  #copy {width: 60px;padding: 5px 10px;}
+  .copyNotification{display:none;position:absolute;background:#c72c2c;padding:7px 20px;border-radius:2px;color:#fff;transform:translate3d(-50%,-50%,0);left:50%;top:50%}
+  .copyNotification.show{display:block}
+    *{margin:0;padding:0;box-sizing:border-box}
   .main{max-width:680px;margin:10px auto;position:relative}
 	  .tab-panel {
   display: none;
@@ -25,6 +65,7 @@
   #copy {width: 60px;padding: 5px 10px;}
   .copyNotification{display:none;position:absolute;background:#c72c2c;padding:7px 20px;border-radius:2px;color:#fff;transform:translate3d(-50%,-50%,0);left:50%;top:50%}
   .copyNotification.show{display:block}
+  
   </style>
 </head>
 <body>
@@ -45,7 +86,8 @@
 
 <div class="tab-content">
 	<div id="home" class="tab-panel active">
-		                <h2 class="tab-title">Selamat Datang di Aplikasi</h2>
+		<section>
+                <h2 class="tab-title">Selamat Datang di Aplikasi</h2>
                 <p class="tab-description">Ini adalah halaman utama aplikasi. Gunakan tab di atas untuk mengakses berbagai fitur yang tersedia.</p>
                 
                 <p>Aplikasi ini menyediakan beberapa fitur utama:</p>
@@ -61,6 +103,18 @@
                     <h3><i class="fas fa-info-circle"></i> Petunjuk Penggunaan</h3>
                     <p>Klik pada tab yang ingin Anda buka. Tab yang aktif akan ditandai dengan warna biru. Setiap tab memiliki fungsionalitas yang berbeda sesuai dengan namanya.</p>
                 </div>
+    </section>
+    <section>
+      <h2>Tutorial</h2>
+      <article class="entry">
+      	<a class="entrylink" href="#">
+          <img alt="gambar ilustrasi" src="https://read.learnyard.com/content/images/2024/07/logo.png"/>
+          <h3>Kode JS untuk Menu dengan Dropdown</h3>
+          <div class="entrysnippet">Berikut ini contoh kode Javascript untuk membuat menu yang memiliki dropdown yang bisa dikontrol di tata letak.</div>
+        </a>
+      </article>
+    </section>
+    <button>Lihat Postingan Lainnya...</button>
 	</div>
 	<div id="ai" class="tab-panel">Konten AI</div>
   <div id="url" class="tab-panel">
