@@ -7,7 +7,7 @@
   <title>Generate URL Blogger dengan JSONP</title>
 	<!--<link rel="stylesheet" href="css/main.css">-->
   <style>
-*,*::before,*::after{box-sizing:border-box}*:not(dialog){margin:0}@media (prefers-reduced-motion:no-preference){html{interpolate-size:allow-keywords}}body{line-height:1.5;-webkit-font-smoothing:antialiased}img,picture,video,canvas,svg{display:block;max-width:100%}input,button,textarea,select{font:inherit}p,h1,h2,h3,h4,h5,h6{overflow-wrap:break-word}p{text-wrap:pretty}h1,h2,h3,h4,h5,h6{text-wrap:balance}#root,#__next{isolation:isolate}
+*,*::before,*::after{box-sizing:border-box}*:not(dialog){margin:0}@media (prefers-reduced-motion:no-preference){html{interpolate-size:allow-keywords}}body{line-height:1.5;-webkit-font-smoothing:antialiased}img,picture,video,canvas,svg{display:block;max-width:100%}input,button,textarea,select{font:inherit}p,h1,h2,h3,h4,h5,h6{overflow-wrap:break-word}p{text-wrap:pretty}h1,h2,h3,h4,h5,h6{text-wrap:auto}#root,#__next{isolation:isolate}
 html{height:100%;overflow:hidden}
 body{width:calc(100% + 0px);height:100%;overflow-y:scroll;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:16px;min-height:100vh;display:flex;flex-direction:column;}
 a{text-decoration:none}
@@ -19,7 +19,7 @@ img{max-width:100%;width:100%}
     ol,ul{margin-left:40px}p{margin-bottom:15px}
     section{margin-bottom:30px}
     .entry-wrapper{display:flex;flex-wrap:wrap}
-     #home section h2{margin-bottom:15px}
+     #home section h2,.quick-entry h3,.quick-entry img{margin-bottom:10px}
     .entry{margin-bottom:20px;width:48%}
     .entry:nth-of-type(even){margin-left:auto}
     .entrylink{color:#000}
@@ -45,13 +45,15 @@ img{max-width:100%;width:100%}
     .page-footer{background:#fafafa; padding:10px 0} 
     .page-footer a{color:#000;text-decoration:underline;font-size:.9rem;margin-right:10px}
     .loadmore{padding:4px 10px;border-radius:2px;margin-bottom:10px}
+/* pre */
+    pre{padding:1em;margin:.5em 0;overflow:auto;border-radius:2px;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;background:#a1c8df29;margin:5px 0 30px}code{color:#000;border-radius:.3em;padding:2px 5px;white-space:pre-wrap;font-size:12px}
   </style>
 </head>
 <body>
 <header class="page-header">
 	<div class="main-raw">
 		<h1>Fun JS for Blogger</h1>
-		<div class="page-description">Useful JS codes for Blogger Template</div>
+		<div class="page-description">Useful javascript codes for Blogger Template</div>
 	</div>
 </header>
 <main class="main">
@@ -92,6 +94,30 @@ img{max-width:100%;width:100%}
     <!-- Area Postingan -->
     <section class="post-section">
       <h2 class="sectionh2">📰 JS Tutorial</h2>
+      <div class="quick-entry">
+        <h3>Quick Tutorial: Kode JS Untuk Gemini dan Cara Pemasangannya di Web Berbasis Blogger</h3>
+        <img src="https://beritakamera.com/wp-content/uploads/2024/08/Gemini-AI-660x330.webp">
+        <p>
+          Untuk memasang fitur Chat dengan Gemini di blog kalian, cukup ikuti tutorial ini.
+        </p>
+        <h4>Prasyarat</h4>
+        <ul>
+          <li>Github Repository
+            <ul>
+          		<li>gemini.js</li>
+              <li>app.js</li>
+            </ul>
+          </li>
+        	<li>Netlify</li>
+        </ul>
+        <h4>Langkah-langkah</h4>
+        <pre><code>const container = document.getElementById('scroll-container'), indicator = document.getElementById('indicator');
+container.style.display = 'block';
+window.onscroll = () => {
+  indicator.style.top = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100) + '%';
+};</code></pre>
+        <div><a href="#">Lanjutkan membaca...</a></div>
+      </div>
       <div class="entry-wrapper">
       <article class="entry">
       	<a class="entrylink" href="#">
@@ -99,8 +125,8 @@ img{max-width:100%;width:100%}
           	<img alt="gambar ilustrasi" src="https://read.learnyard.com/content/images/2024/07/logo.png"/>
           </div>
           <div class="entrysnippet">
-          <h3>Kode JS untuk Menu dengan Dropdown</h3>
-          <div class="entrysnippet">Berikut ini contoh kode Javascript untuk membuat menu yang memiliki dropdown yang bisa dikontrol di tata letak... ↗</div>
+            <h3>Kode JS untuk Menu dengan Dropdown</h3>
+          	<div class="entrysnippet">Berikut ini contoh kode Javascript untuk membuat menu yang memiliki dropdown yang bisa dikontrol di tata letak... ↗</div>
           </div>
         </a>
       </article>
