@@ -17,17 +17,23 @@
   </style>
 </head>
 <body>
+<header class="page-header"><h1>Fun JS for Blogger</h1>
+<div class="page-description">Useful JS codes for Blogger Template</div>
+</header>
 <main class="main">
-  <h2>Generate URL Postingan Blogger (via JSONP)</h2>
-  <div class="option">
-  <input id="domain-name" type="text" placeholder="Url blog" value="www.goinsan.com">
-  <input id="max-res" type="number" value="50">
-  <input id="urltag" type="text" placeholder="label">
-  <button onclick="generate()">Generate</button>
-  </div>
-  <textarea id="results" rows="20" cols="80" placeholder="Hasil URL akan muncul di sini..."></textarea>
-  <button id="copy" onclick="copyText('results')">Salin</button>
-  <div class="copyNotification">Disalin</div>
+	<div id="url-generator">
+		<div class="h2-label"> Blogger URL Generator</div>
+		<h2>Generate URL Postingan Blogger (via JSONP)</h2>
+		<div class="option">
+			<input id="domain-name" type="text" placeholder="Url blog" value="www.goinsan.com">
+			<input id="max-res" type="number" value="50">
+			<input id="urltag" type="text" placeholder="label">
+			<button onclick="generate()">Generate</button>
+		</div>
+		<textarea id="results" rows="20" cols="80" placeholder="Hasil URL akan muncul di sini..."></textarea>
+		<button id="copy" onclick="copyText('results')">Salin</button>
+		<div class="copyNotification">Disalin</div>
+	</div>
 </main>
   <script>
     function generate() {
